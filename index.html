@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TutorAgent — AI 多智能体教学系统</title>
+  <style>
+    :root{--accent:#2563EB;--muted:#6b7280;--card:#ffffff;--bg:#f8fafc}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;color:var(--accent);font-size:20px}
+    .tag{color:var(--muted);font-size:14px}
+    main{margin-top:20px}
+    .hero{background:linear-gradient(90deg,rgba(37,99,235,0.06),transparent);padding:22px;border-radius:12px}
+    h1{margin:0 0 8px 0}
+    p.lead{margin:0;color:#111827}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 1px 6px rgba(2,6,23,0.06)}
+    .feature{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+    .feature h4{margin:0}
+    .cta{display:inline-block;padding:10px 16px;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    iframe.pdf-embed{width:100%;height:400px;border:0;border-radius:8px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="logo">TutorAgent</div>
+        <div class="tag">Explanation · Practice · Learning Coach</div>
+      </div>
+      <nav>
+        <a class="cta" href="#try">试用（Demo）</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <h1>让每个学生都拥有一个会教、会出题、会指导的 AI 老师</h1>
+        <p class="lead">TutorAgent 是一个多智能体教育平台：Teaching Agent（教学解释）、Exercise Agent（练习生成）、Coach Agent（学习建议）。我们把“回答”变成“教学”。</p>
+      </section>
+
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>产品要点</h3>
+            <div class="feature">
+              <div>
+                <h4>教学型回答（Teacher Agent）</h4>
+                <p class="muted">自然、直观、有例子，像老师讲课而不是百科全书。</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div>
+                <h4>习题自动生成（Exercise Agent）</h4>
+                <p class="muted">基于学生问题生成同主题、匹配难度的练习题。</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div>
+                <h4>个性化学习建议（Coach Agent）</h4>
+                <p class="muted">分析回答+问题，给出下一步学习路径。</p>
+              </div>
+            </div>
+
+            <p style="margin-top:12px"><a href="#how" class="cta">了解更多</a></p>
+          </div>
+
+          <div id="how" class="card" style="margin-top:14px">
+            <h3>如何使用（示例流程）</h3>
+            <ol>
+              <li>学生输入问题 → Teacher Agent 回答（解释）</li>
+              <li>系统生成一道练习题 → 学生答题</li>
+              <li>Coach Agent 根据答题结果给出学习建议</li>
+            </ol>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>快速体验</h3>
+            <p class="tag">参考资料（产品说明书）</p>
+            <!-- 本地文件路径（你上传过的 PDF） -->
+            <p><a href="/mnt/data/project_readme.pdf" target="_blank">查看 Project Readme（/mnt/data/project_readme.pdf）</a></p>
+            <p style="margin-top:8px;color:var(--muted)">注意：若在本地通过 HTTP 服务访问，请将 PDF 放在网站根目录，或把链接改为相对路径。</p>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 id="try">立即试用</h4>
+            <p class="muted">（示例）输入你的问题到系统，我们会返回教学回答、练习与建议</p>
+            <p><a class="cta" href="#">免费试用</a></p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h3>内嵌文档（快速浏览）</h3>
+        <!-- 直接嵌入本地 PDF 路径（按你的要求用 /mnt/data/project_readme.pdf） -->
+        <iframe class="pdf-embed" src="./project_readme.pdf"></iframe>
+        <p style="font-size:13px;color:var(--muted);margin-top:8px">如果浏览器不允许直接嵌入本地文件，请打开上方链接或将 PDF 放在 web 根目录并以 http://localhost:8000/project_readme.pdf 形式访问。</p>
+      </div>
+
+    </main>
+
+    <footer>
+      © TutorAgent · Demo · 联系：you@yourdomain.com
+    </footer>
+  </div>
+</body>
+</html>
